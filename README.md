@@ -96,10 +96,13 @@ Copy `.env-example` to `.env` and configure your database and secrets:
 PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/civic_db
 JWT_SECRET=your_super_secret_key
-GOOGLE_APPLICATION_CREDENTIALS=/path/to/your/vision-key.json
+GOOGLE_APPLICATION_CREDENTIALS=/absolute/path/to/civicpulse-secrets/vision-key.json
 EMAIL_USER=your_email@gmail.com
 EMAIL_PASS=your_gmail_app_password
 ```
+
+**Vision API Key Setup:**
+Create a folder named `civicpulse-secrets` in the root of your project. Copy the template from `civicpulse-secrets-example/vision-key-example.json` into your new folder, rename it to `vision-key.json`, and fill in your actual Google Cloud credentials.
 
 ### 3. Frontend Setup
 ```bash
