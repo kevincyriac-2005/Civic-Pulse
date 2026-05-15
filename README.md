@@ -91,7 +91,7 @@ cd Civic-Pulse
 cd backend
 npm install
 ```
-Copy `.env.example` to `.env` and configure your database and secrets:
+Copy `.env-example` to `.env` and configure your database and secrets:
 ```env
 PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/civic_db
