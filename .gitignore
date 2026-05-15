@@ -1,0 +1,54 @@
+# =============================================
+# Civic-Pulse Root .gitignore
+# =============================================
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment & Secrets (CRITICAL - NEVER COMMIT)
+.env
+.env.*
+*.env
+civicpulse-secrets/
+*.key
+*.pem
+*.p12
+*.json.bak
+
+# Google Cloud credentials
+vision-key.json
+*-credentials.json
+*-service-account.json
+
+# Uploaded user files
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Build output
+frontend/build/
+dist/
+
+# Debug & test scripts
+debug-*.js
+test-suite.js
+test-cleanup.js
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage
+coverage/
+.nyc_output/

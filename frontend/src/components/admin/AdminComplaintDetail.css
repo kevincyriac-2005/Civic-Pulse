@@ -1,0 +1,252 @@
+/* ============================================================
+   CIVIC-PULSE — AdminComplaintDetail Component Styles
+   ============================================================ */
+
+/* ── Page Wrapper ──────────────────────────────── */
+
+.acd-page-wrapper {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ── Header Row ────────────────────────────────── */
+
+.acd-header-row {
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* ── Error State ───────────────────────────────── */
+
+.acd-error-wrapper {
+    padding: 2rem;
+    text-align: center;
+}
+
+.acd-error-wrapper p {
+    color: #ef4444;
+    margin-bottom: 1rem;
+}
+
+/* ── Badge Row ─────────────────────────────────── */
+
+.acd-badge-row {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.acd-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+}
+
+/* ── Glass Card ────────────────────────────────── */
+
+.acd-card {
+    background: var(--admin-bg-card-dark);
+    border: 1px solid var(--admin-border-soft);
+    border-radius: 16px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    margin-top: 1rem;
+}
+
+.acd-card:first-of-type {
+    margin-top: 0;
+}
+
+/* ── Section Title ─────────────────────────────── */
+
+.acd-section-title {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+/* ── Images ────────────────────────────────────── */
+
+.acd-img-label {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--admin-text-muted);
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.acd-img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.acd-no-img {
+    width: 100%;
+    height: 200px;
+    background: #1e293b;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #475569;
+    font-size: 0.9rem;
+}
+
+.acd-img-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.acd-img-grid-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* ── Details Grid ─────────────────────────────── */
+
+.acd-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* ── Detail Row (sub-component) ──────────────── */
+
+.acd-detail-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.acd-detail-icon {
+    color: var(--admin-text-dim);
+    margin-top: 2px;
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.acd-detail-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--admin-text-dim);
+    margin-bottom: 2px;
+}
+
+.acd-detail-value {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}
+
+/* ── Trust Metadata Box ──────────────────────── */
+
+.acd-trust-meta {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.acd-trust-meta h4 {
+    margin: 0 0 0.75rem;
+    font-size: 0.9rem;
+    color: var(--admin-text-muted);
+}
+
+.acd-trust-meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.acd-trust-meta-key {
+    color: var(--admin-text-muted);
+}
+
+.acd-trust-meta-val {
+    color: #e2e8f0;
+}
+
+/* ── Vision Labels ────────────────────────────── */
+
+.acd-labels-section {
+    margin-top: 1rem;
+}
+
+.acd-labels-section h4 {
+    margin: 0 0 0.75rem;
+    font-size: 0.9rem;
+    color: var(--admin-text-muted);
+}
+
+.acd-labels-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.acd-label-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    background: rgba(99, 102, 241, 0.12);
+    color: #a5b4fc;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+.acd-label-score {
+    opacity: 0.6;
+    margin-left: 2px;
+}
+
+/* ── Remarks Pre-block ────────────────────────── */
+
+.acd-remarks-pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: var(--admin-text-body);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    font-family: inherit;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Card Title ───────────────────────────────── */
+
+.acd-card-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.acd-card-id {
+    color: var(--admin-text-muted);
+    margin: 0.5rem 0 0;
+    font-size: 0.85rem;
+}
+
+.acd-card-desc {
+    color: var(--admin-text-body);
+    margin-top: 1rem;
+    line-height: 1.6;
+}

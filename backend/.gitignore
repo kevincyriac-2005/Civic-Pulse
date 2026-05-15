@@ -1,0 +1,3 @@
+# Ignore uploaded user files but keep the folder tracked
+uploads/*
+!uploads/.gitkeep

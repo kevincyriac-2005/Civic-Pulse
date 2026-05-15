@@ -1,0 +1,19 @@
+.cc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cc-title {
+    margin-top: 0;
+}
+
+.cc-actions {
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.cc-btn {
+    padding: 0.5rem 0.75rem;
+}

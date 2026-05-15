@@ -1,0 +1,50 @@
+.fwp-head-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.fwp-edit-btn {
+    background: transparent;
+    border: none;
+    color: var(--fw-accent-blue);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.fwp-profile-top {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.fwp-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--fw-accent-blue);
+    color: var(--fw-text-light);
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.fwp-user-name {
+    color: var(--fw-text-light);
+    margin-bottom: 0.5rem;
+}
+
+.fwp-user-email {
+    color: var(--fw-text-muted);
+}
+
+.fwp-role-badge {
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.fwp-role-text {
+    text-transform: capitalize;
+}

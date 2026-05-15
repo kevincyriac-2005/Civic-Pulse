@@ -1,0 +1,27 @@
+.fieldworker-theme {
+    --fw-bg-card: rgba(30, 41, 59, 0.7);
+    --fw-bg-card-dark: rgba(15, 23, 42, 0.6);
+    --fw-bg-overlay: rgba(15, 23, 42, 0.95);
+    --fw-bg-input: rgba(0, 0, 0, 0.2);
+
+    --fw-border-soft: rgba(255, 255, 255, 0.08);
+    --fw-border-medium: rgba(255, 255, 255, 0.1);
+    --fw-border-strong: rgba(255, 255, 255, 0.2);
+
+    --fw-text-light: #f8fafc;
+    --fw-text-body: #cbd5e1;
+    --fw-text-muted: #94a3b8;
+    --fw-text-dim: #64748b;
+
+    --fw-accent-blue: #3b82f6;
+    --fw-accent-green: #10b981;
+    --fw-accent-amber: #f59e0b;
+    --fw-accent-red: #ef4444;
+    --fw-accent-purple: #a855f7;
+
+    --fw-radius-card: 16px;
+    --fw-radius-md: 12px;
+    --fw-radius-sm: 8px;
+    --fw-radius-xs: 4px;
+    --fw-radius-pill: 999px;
+}

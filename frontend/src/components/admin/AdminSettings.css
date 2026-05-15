@@ -1,0 +1,345 @@
+/* ============================================================
+   CIVIC-PULSE — AdminSettings Component Styles
+   Phase 2 token system only — no Bootstrap, no old vars
+   ============================================================ */
+
+/* ── Page Wrapper ──────────────────────────────── */
+
+.as-page {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--admin-space-6);
+    box-sizing: border-box;
+}
+
+.as-page-title {
+    font-size: var(--admin-text-3xl);
+    font-weight: var(--admin-font-bold);
+    color: var(--admin-text-primary);
+    margin: 0 0 var(--admin-space-1) 0;
+}
+
+/* ── Page Header ───────────────────────────────── */
+
+.as-header {
+    margin-bottom: var(--admin-space-6);
+    padding-bottom: var(--admin-space-4);
+    border-bottom: 1px solid var(--admin-border-subtle);
+}
+
+.as-subtitle {
+    font-size: var(--admin-text-sm);
+    color: var(--admin-text-muted);
+    margin: var(--admin-space-1) 0 0 0;
+}
+
+/* ── Settings Grid ─────────────────────────────── */
+
+.as-settings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--admin-space-6);
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: var(--admin-space-6);
+}
+
+@media (max-width: 768px) {
+    .as-settings-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Card ──────────────────────────────────────── */
+
+.as-card {
+    background: var(--admin-surface-card);
+    border: 1px solid var(--admin-border-subtle);
+    border-radius: var(--admin-radius-lg);
+    box-shadow: var(--admin-shadow-md);
+    padding: var(--admin-space-6);
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.as-card-full {
+    grid-column: 1 / -1;
+}
+
+/* ── Card Title ────────────────────────────────── */
+
+.as-card-title {
+    font-size: var(--admin-text-xl);
+    font-weight: var(--admin-font-bold);
+    color: var(--admin-text-primary);
+    margin: 0 0 var(--admin-space-5) 0;
+    padding-bottom: var(--admin-space-3);
+    border-bottom: 1px solid var(--admin-border-subtle);
+}
+
+/* ── Toggle Row ────────────────────────────────── */
+
+.as-toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--admin-space-3) 0;
+    border-bottom: 1px solid var(--admin-border-subtle);
+    gap: var(--admin-space-4);
+}
+
+.as-toggle-row:last-of-type {
+    border-bottom: none;
+}
+
+.as-toggle-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+}
+
+.as-toggle-label {
+    font-size: var(--admin-text-sm);
+    font-weight: var(--admin-font-semibold);
+    color: var(--admin-text-primary);
+}
+
+.as-toggle-desc {
+    font-size: var(--admin-text-xs);
+    color: var(--admin-text-muted);
+}
+
+/* ── Toggle Switch ─────────────────────────────── */
+
+.as-toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.as-toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.as-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--admin-border-default);
+    border-radius: var(--admin-radius-pill);
+    transition: background 0.3s ease;
+}
+
+.as-toggle-slider::before {
+    position: absolute;
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: #ffffff;
+    border-radius: 50%;
+    bottom: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+}
+
+.as-toggle-switch input:checked + .as-toggle-slider {
+    background: var(--admin-accent-blue);
+    border-color: var(--admin-accent-blue);
+}
+
+.as-toggle-switch input:checked + .as-toggle-slider::before {
+    transform: translateX(20px);
+}
+
+/* ── Field Row ─────────────────────────────────── */
+
+.as-field-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--admin-space-1);
+    padding: var(--admin-space-3) 0;
+    border-bottom: 1px solid var(--admin-border-subtle);
+}
+
+.as-field-row:last-of-type {
+    border-bottom: none;
+}
+
+/* ── Label ─────────────────────────────────────── */
+
+.as-label {
+    font-size: var(--admin-text-xs);
+    font-weight: var(--admin-font-semibold);
+    color: var(--admin-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* ── Input / Select ────────────────────────────── */
+
+.as-input {
+    background: var(--admin-surface-card-alt);
+    border: 1px solid var(--admin-border-default);
+    border-radius: var(--admin-radius-sm);
+    color: var(--admin-text-primary);
+    font-size: var(--admin-text-sm);
+    font-family: var(--admin-font-family);
+    padding: var(--admin-space-2) var(--admin-space-4);
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.as-input:focus {
+    outline: none;
+    border-color: var(--admin-accent-blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.as-select {
+    appearance: none;
+    cursor: pointer;
+}
+
+/* ── Primary Button ────────────────────────────── */
+
+.as-btn-primary {
+    background: linear-gradient(135deg, var(--admin-accent-blue), #2563eb);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--admin-radius-sm);
+    font-size: var(--admin-text-sm);
+    font-weight: var(--admin-font-semibold);
+    padding: var(--admin-space-2) var(--admin-space-6);
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: var(--admin-space-4);
+}
+
+.as-btn-primary:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.as-btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ── Feedback Messages ─────────────────────────── */
+
+.as-msg-success {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: var(--admin-accent-green);
+    border-radius: var(--admin-radius-sm);
+    padding: var(--admin-space-2) var(--admin-space-4);
+    font-size: var(--admin-text-sm);
+    margin-top: var(--admin-space-3);
+    text-align: center;
+}
+
+.as-msg-error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: var(--admin-accent-red);
+    border-radius: var(--admin-radius-sm);
+    padding: var(--admin-space-2) var(--admin-space-4);
+    font-size: var(--admin-text-sm);
+    margin-top: var(--admin-space-3);
+    text-align: center;
+}
+
+/* ── System Info Grid ──────────────────────────── */
+
+.as-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--admin-space-4);
+}
+
+@media (max-width: 768px) {
+    .as-info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .as-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.as-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--admin-space-1);
+}
+
+.as-info-label {
+    font-size: var(--admin-text-xs);
+    font-weight: var(--admin-font-semibold);
+    color: var(--admin-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.as-info-value {
+    font-size: var(--admin-text-sm);
+    color: var(--admin-text-primary);
+    font-weight: var(--admin-font-medium);
+}
+
+/* ── Status ────────────────────────────────────── */
+
+.as-status-active {
+    color: var(--admin-accent-green);
+    font-weight: var(--admin-font-semibold);
+}
+
+/* ── Unified Card ──────────────────────────────── */
+
+.as-unified-card {
+    padding: 0;
+    margin-bottom: var(--admin-space-6);
+}
+
+.as-grid-unified {
+    margin-bottom: 0;
+    gap: 0;
+}
+
+.as-section {
+    padding: var(--admin-space-6);
+    display: flex;
+    flex-direction: column;
+}
+
+.as-form-action {
+    margin-top: auto;
+}
+
+.as-section-right {
+    border-left: 1px solid var(--admin-border-subtle);
+}
+
+@media (max-width: 768px) {
+    .as-section-right {
+        border-left: none;
+        border-top: 1px solid var(--admin-border-subtle);
+    }
+}
+

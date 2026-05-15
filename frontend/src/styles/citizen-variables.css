@@ -1,0 +1,27 @@
+.citizen-theme {
+    --ct-bg-card: rgba(30, 41, 59, 0.7);
+    --ct-bg-card-dark: rgba(15, 23, 42, 0.6);
+    --ct-bg-overlay: rgba(15, 23, 42, 0.95);
+    --ct-bg-input: rgba(0, 0, 0, 0.2);
+
+    --ct-border-soft: rgba(255, 255, 255, 0.08);
+    --ct-border-medium: rgba(255, 255, 255, 0.1);
+    --ct-border-strong: rgba(255, 255, 255, 0.2);
+
+    --ct-text-light: #f8fafc;
+    --ct-text-body: #cbd5e1;
+    --ct-text-muted: #94a3b8;
+    --ct-text-dim: #64748b;
+
+    --ct-accent-blue: #3b82f6;
+    --ct-accent-green: #10b981;
+    --ct-accent-amber: #f59e0b;
+    --ct-accent-red: #ef4444;
+    --ct-accent-purple: #a855f7;
+
+    --ct-radius-card: 16px;
+    --ct-radius-md: 12px;
+    --ct-radius-sm: 8px;
+    --ct-radius-xs: 4px;
+    --ct-radius-pill: 999px;
+}

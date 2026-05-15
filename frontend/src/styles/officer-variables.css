@@ -1,0 +1,36 @@
+/* ============================================================
+   CIVIC-PULSE - Officer Theme Variables
+   Scope: .officer-theme wrapper (set in officerLayout.js)
+   ============================================================ */
+
+.officer-theme {
+    --officer-bg-card: rgba(30, 41, 59, 0.7);
+    --officer-bg-card-dark: rgba(15, 23, 42, 0.6);
+    --officer-bg-overlay: rgba(15, 23, 42, 0.95);
+    --officer-bg-input: rgba(0, 0, 0, 0.2);
+
+    --officer-border-soft: rgba(255, 255, 255, 0.08);
+    --officer-border-medium: rgba(255, 255, 255, 0.1);
+    --officer-border-strong: rgba(255, 255, 255, 0.2);
+
+    --officer-text-light: #f8fafc;
+    --officer-text-body: #cbd5e1;
+    --officer-text-muted: #94a3b8;
+    --officer-text-dim: #64748b;
+
+    --officer-accent-blue: #3b82f6;
+    --officer-accent-blue-soft: rgba(59, 130, 246, 0.15);
+    --officer-accent-green: #10b981;
+    --officer-accent-amber: #f59e0b;
+    --officer-accent-red: #ef4444;
+    --officer-accent-purple: #8b5cf6;
+
+    --officer-radius-card: 16px;
+    --officer-radius-md: 12px;
+    --officer-radius-sm: 8px;
+    --officer-radius-xs: 4px;
+    --officer-radius-pill: 20px;
+
+    --officer-shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --officer-shadow-modal: 0 20px 40px rgba(0, 0, 0, 0.4);
+}

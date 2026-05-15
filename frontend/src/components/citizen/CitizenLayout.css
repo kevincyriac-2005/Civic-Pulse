@@ -1,0 +1,5 @@
+.cl-logout-item {
+    margin-top: auto;
+    color: var(--ct-accent-red);
+    cursor: pointer;
+}

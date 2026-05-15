@@ -1,0 +1,283 @@
+/* ============================================================
+   CIVIC-PULSE — Admin Utility Classes
+   Reusable layout + UI patterns for admin components
+   Import after admin-variables.css, before Component.css
+   ============================================================ */
+
+/* ── Flexbox Utilities ─────────────────────────── */
+
+.admin-flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-flex-col-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.admin-flex-start {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.admin-flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* ── Grid Utilities ────────────────────────────── */
+
+.admin-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.admin-grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+/* ── Glass Card ────────────────────────────────── */
+
+.admin-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.admin-card+.admin-card {
+    margin-top: 1rem;
+}
+
+/* ── Badge / Pill ──────────────────────────────── */
+
+.admin-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--admin-space-1) var(--admin-space-3);
+    border-radius: var(--admin-radius-pill);
+    font-size: var(--admin-text-xs);
+    font-weight: var(--admin-font-semibold);
+    border: 1px solid transparent;
+}
+
+.admin-badge-sm {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--admin-space-1) var(--admin-space-3);
+    border-radius: var(--admin-radius-pill);
+    font-size: var(--admin-text-xs);
+    font-weight: var(--admin-font-semibold);
+    border: 1px solid transparent;
+}
+
+/* ── Modal Overlay ─────────────────────────────── */
+
+.admin-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    padding: 20px;
+}
+
+/* ── Back Button ───────────────────────────────── */
+
+.admin-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.admin-back-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #f8fafc;
+}
+
+/* ── Dropdown Button Base ──────────────────────── */
+
+.admin-dropdown-btn {
+    width: 100%;
+    padding: 8px 12px;
+    background: transparent;
+    border: none;
+    color: #f8fafc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+    text-align: left;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.admin-dropdown-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.admin-dropdown-btn--danger {
+    color: #ef4444;
+}
+
+.admin-dropdown-btn--danger:hover {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+/* ── View / Action Button ──────────────────────── */
+
+.admin-view-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: var(--admin-space-2) var(--admin-space-5);
+    background: rgba(37, 99, 235, 0.15);
+    color: #60a5fa;
+    border: none;
+    border-radius: var(--admin-radius-sm);
+    cursor: pointer;
+    font-size: var(--admin-text-sm);
+    font-weight: var(--admin-font-semibold);
+    transition: all 0.2s ease;
+}
+
+.admin-view-btn:hover {
+    background: rgba(37, 99, 235, 0.3);
+}
+
+/* ── Export Button ─────────────────────────────── */
+
+.admin-export-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: var(--admin-space-2) var(--admin-space-5);
+    background: rgba(59, 130, 246, 0.2);
+    border: none;
+    color: #60a5fa;
+    border-radius: var(--admin-radius-sm);
+    cursor: pointer;
+    font-size: var(--admin-text-sm);
+    font-weight: var(--admin-font-semibold);
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.admin-export-btn:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+/* ── Form Controls (dark theme) ────────────────── */
+
+.admin-form-select,
+.admin-form-date {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-family: inherit;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.admin-form-date {
+    color-scheme: dark;
+}
+
+.admin-form-label {
+    display: block;
+    font-size: 14px;
+    color: #cbd5e1;
+    margin-bottom: 6px;
+}
+
+/* ── Section Title ─────────────────────────────── */
+
+.admin-section-title {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+/* ── Error / Info States ───────────────────────── */
+
+.admin-error-inline {
+    padding: 1rem;
+    color: #ef4444;
+}
+
+.admin-loading-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #94a3b8;
+}
+
+.admin-table-empty {
+    text-align: center;
+    padding: var(--admin-space-10) var(--admin-space-6);
+    color: var(--admin-text-muted);
+    font-size: var(--admin-text-sm);
+    font-weight: var(--admin-font-medium);
+    border-bottom: 1px solid var(--admin-border-subtle);
+}
+
+.admin-table-empty-icon {
+    display: block;
+    font-size: var(--admin-text-2xl);
+    margin-bottom: var(--admin-space-2);
+    opacity: 0.4;
+}
+
+/* ── Page Wrapper ──────────────────────────────── */
+
+.admin-page-wrapper {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #f8fafc;
+}

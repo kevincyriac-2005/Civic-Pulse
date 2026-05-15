@@ -1,0 +1,48 @@
+.myt-header-card {
+    margin-bottom: 32px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.myt-header-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.myt-empty-card {
+    background-color: #1e293b;
+    border: 1px dashed #334155;
+    padding: 48px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.myt-empty-icon-wrap {
+    width: 64px;
+    height: 64px;
+    background-color: #0f172a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.myt-empty-icon {
+    font-size: 24px;
+    color: var(--fw-text-dim);
+}
+
+.myt-empty-title {
+    color: #f1f5f9;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    font-size: 18px;
+}
+
+.myt-empty-subtitle {
+    color: var(--fw-text-muted);
+    font-size: 14px;
+    margin: 0;
+}

@@ -1,0 +1,54 @@
+/* ============================================================
+   CIVIC-PULSE - Officer Utility Classes
+   ============================================================ */
+
+.officer-flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.officer-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.officer-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.officer-card {
+    background: var(--officer-bg-card-dark);
+    border: 1px solid var(--officer-border-medium);
+    border-radius: var(--officer-radius-card);
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.officer-modal-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    padding: 20px;
+}
+
+/* reserved for badge usage */
+.officer-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.85rem;
+    border-radius: var(--officer-radius-pill);
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+}

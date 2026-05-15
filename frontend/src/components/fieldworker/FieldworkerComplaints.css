@@ -1,0 +1,177 @@
+/* Component-local extension file for FieldworkerComplaints */
+
+.fwc-task-item {
+    border-bottom: 1px solid var(--fw-border-soft);
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    flex-direction: column;
+}
+
+.fwc-task-main {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.fwc-thumb-wrap {
+    cursor: pointer;
+    position: relative;
+}
+
+.fwc-thumb {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: var(--fw-radius-sm);
+    border: 1px solid var(--fw-border-soft);
+}
+
+.fwc-thumb-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: var(--fw-radius-sm);
+}
+
+.fwc-thumb-overlay-icon {
+    color: #fff;
+}
+
+.fwc-task-content {
+    flex: 1;
+}
+
+.fwc-task-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    align-items: flex-start;
+}
+
+.fwc-task-title {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.fwc-task-desc {
+    color: var(--fw-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.fwc-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    font-size: 0.9rem;
+    background: var(--fw-bg-input);
+    padding: 1rem;
+    border-radius: var(--fw-radius-sm);
+}
+
+.fwc-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.fwc-info-label {
+    color: var(--fw-text-dim);
+    font-size: 0.8rem;
+}
+
+.fwc-info-value {
+    color: var(--fw-text-light);
+}
+
+.fwc-info-icon {
+    margin-right: 8px;
+}
+
+.fwc-info-icon-user {
+    color: #60a5fa;
+}
+
+.fwc-info-icon-shield {
+    color: var(--fw-accent-purple);
+}
+
+.fwc-info-icon-clock {
+    color: var(--fw-accent-amber);
+}
+
+.fwc-info-icon-location {
+    color: var(--fw-accent-red);
+}
+
+.fwc-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.fwc-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    font-size: 0.9rem;
+}
+
+.fwc-details-btn {
+    background: var(--fw-accent-blue);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.fwc-image-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.fwc-image-modal-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: var(--fw-radius-sm);
+}
+
+.fwc-image-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}

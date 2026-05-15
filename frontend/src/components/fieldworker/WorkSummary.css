@@ -1,0 +1,168 @@
+.ws-header-card {
+    margin-bottom: 32px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.ws-header-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ws-empty-card {
+    background-color: #1e293b;
+    border: 1px dashed #334155;
+    padding: 48px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.ws-empty-icon-wrap {
+    width: 64px;
+    height: 64px;
+    background-color: #0f172a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.ws-empty-icon {
+    font-size: 24px;
+    color: var(--fw-text-dim);
+}
+
+.ws-empty-title {
+    color: #f1f5f9;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    font-size: 18px;
+}
+
+.ws-empty-subtitle {
+    color: var(--fw-text-muted);
+    font-size: 14px;
+    margin: 0;
+}
+
+.ws-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.ws-grid-kpi {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.ws-kpi-primary {
+    background: linear-gradient(to bottom right, #059669, #064e3b);
+}
+
+.ws-kpi-primary-title {
+    color: #a7f3d0;
+}
+
+.ws-kpi-pill {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ws-kpi-primary-body {
+    margin-top: 32px;
+    margin-bottom: 8px;
+    z-index: 10;
+    position: relative;
+}
+
+.ws-kpi-primary-subtitle {
+    color: #a7f3d0;
+}
+
+.ws-hours-label {
+    font-size: 16px;
+    color: var(--fw-text-dim);
+    font-weight: bold;
+}
+
+.ws-last-icon-wrap {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+.ws-last-date {
+    color: #f8fafc;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.ws-last-caption {
+    color: var(--fw-text-dim);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 4px 0 0 0;
+}
+
+.ws-progress-card {
+    background-color: #1e293b;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid #334155;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.ws-progress-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
+
+.ws-progress-title {
+    color: #f1f5f9;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+}
+
+.ws-progress-subtitle {
+    color: var(--fw-text-muted);
+    font-size: 14px;
+    margin: 0;
+}
+
+.ws-progress-pct {
+    font-size: 32px;
+    font-weight: 900;
+    color: #34d399;
+    line-height: 1;
+}
+
+.ws-progress-track {
+    width: 100%;
+    background-color: #0f172a;
+    border-radius: 9999px;
+    height: 16px;
+    overflow: hidden;
+    border: 1px solid #334155;
+}
+
+.ws-progress-fill {
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 1s ease-in-out;
+    background: linear-gradient(90deg, #059669 0%, #34d399 100%);
+}
+
+.ws-progress-foot {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--fw-text-dim);
+}

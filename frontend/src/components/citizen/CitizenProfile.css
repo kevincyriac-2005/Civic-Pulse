@@ -1,0 +1,50 @@
+.cp-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cp-edit-btn {
+    background: transparent;
+    border: none;
+    color: var(--ct-accent-blue);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.cp-summary {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cp-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--ct-accent-blue);
+    color: #fff;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.cp-name {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.cp-email {
+    color: var(--ct-text-muted);
+}
+
+.cp-verified-badge {
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.cp-capitalize {
+    text-transform: capitalize;
+}

@@ -1,0 +1,135 @@
+/* Component-local extension file for TaskCard */
+
+.tc-modal-head {
+    margin-bottom: 24px;
+}
+
+.tc-modal-title {
+    font-size: 20px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--fw-text-light);
+}
+
+.tc-modal-close {
+    background: none;
+    border: none;
+    color: var(--fw-text-muted);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.tc-target-box {
+    background: rgba(59, 130, 246, 0.08);
+    padding: 16px;
+    border-radius: var(--fw-radius-md);
+    margin-bottom: 24px;
+    border-left: 4px solid var(--fw-accent-blue);
+}
+
+.tc-target-title {
+    margin: 0;
+    color: var(--fw-text-light);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tc-target-id {
+    margin: 4px 0 0 0;
+    color: var(--fw-text-dim);
+    font-size: 12px;
+    font-family: monospace;
+}
+
+.tc-modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tc-modal-label {
+    display: block;
+    color: var(--fw-text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tc-hidden-input {
+    display: none;
+}
+
+.tc-upload-label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+}
+
+.tc-upload-icon {
+    font-size: 32px;
+    color: var(--fw-text-muted);
+}
+
+.tc-upload-icon-active {
+    color: var(--fw-accent-green);
+}
+
+.tc-upload-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--fw-text-dim);
+}
+
+.tc-upload-text-active {
+    color: var(--fw-accent-green);
+}
+
+.tc-location-btn {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--fw-border-soft);
+    border-radius: var(--fw-radius-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    background: var(--fw-bg-card-dark);
+    color: var(--fw-text-muted);
+    transition: all 0.2s;
+}
+
+.tc-location-btn-success {
+    background: rgba(16, 185, 129, 0.08);
+    border-color: rgba(16, 185, 129, 0.3);
+    color: #34d399;
+}
+
+.tc-submit-btn {
+    margin-top: 8px;
+    padding: 16px;
+    width: 100%;
+}
+
+.tc-status-icon {
+    font-size: 18px;
+}
+
+.tc-actions-row {
+    display: flex;
+    gap: 12px;
+}
+
+.tc-map-link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

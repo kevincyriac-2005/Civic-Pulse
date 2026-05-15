@@ -1,0 +1,22 @@
+.odp-category-select {
+    background-color: white;
+}
+
+.odp-file-hidden {
+    display: none;
+}
+
+.odp-file-label {
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.odp-upload-icon {
+    color: var(--officer-text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.odp-upload-text {
+    margin: 0;
+    color: var(--officer-text-dim);
+}

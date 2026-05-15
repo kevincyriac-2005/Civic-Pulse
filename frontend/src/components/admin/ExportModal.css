@@ -1,0 +1,206 @@
+/* ============================================================
+   CIVIC-PULSE — ExportModal Component Styles
+   ============================================================ */
+
+/* ── Modal Overlay ─────────────────────────────── */
+
+.em-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    padding: 20px;
+}
+
+/* ── Modal Content Box ─────────────────────────── */
+
+.em-content {
+    background: var(--admin-bg-overlay);
+    border: 1px solid var(--admin-border-medium);
+    border-radius: 16px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    color: #f8fafc;
+}
+
+/* ── Header ────────────────────────────────────── */
+
+.em-header {
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.em-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.em-header-icon {
+    color: #3b82f6;
+}
+
+/* ── Close Button ──────────────────────────────── */
+
+.em-close-btn {
+    background: transparent;
+    border: none;
+    color: var(--admin-text-muted);
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    padding: 4px;
+    transition: color 0.2s ease;
+}
+
+.em-close-btn:hover {
+    color: #f8fafc;
+}
+
+/* ── Form ──────────────────────────────────────── */
+
+.em-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ── Form Label ────────────────────────────────── */
+
+.em-label {
+    display: block;
+    font-size: 14px;
+    color: var(--admin-text-body);
+    margin-bottom: 6px;
+}
+
+/* ── Inputs ────────────────────────────────────── */
+
+.em-select,
+.em-date-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-family: inherit;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.em-date-input {
+    color-scheme: dark;
+}
+
+/* ── Date Row ──────────────────────────────────── */
+
+.em-date-row {
+    display: flex;
+    gap: 15px;
+}
+
+.em-date-group {
+    flex: 1;
+}
+
+/* ── Format Toggle ─────────────────────────────── */
+
+.em-format-row {
+    display: flex;
+    gap: 10px;
+}
+
+.em-format-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    flex: 1;
+    transition: all 0.15s ease;
+}
+
+.em-format-label--active {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: #3b82f6;
+}
+
+.em-format-label input[type="radio"] {
+    cursor: pointer;
+}
+
+.em-format-icon-csv {
+    color: #10b981;
+}
+
+.em-format-icon-pdf {
+    color: #ef4444;
+}
+
+/* ── Footer Buttons ────────────────────────────── */
+
+.em-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.em-btn-cancel {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    color: #f8fafc;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+.em-btn-cancel:hover {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.em-btn-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #3b82f6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+.em-btn-submit:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.em-btn-submit:not(:disabled):hover {
+    background: #2563eb;
+}

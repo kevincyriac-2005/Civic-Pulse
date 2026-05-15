@@ -1,0 +1,207 @@
+/* ==========================================
+   CIVIC-PULSE — User Management
+   Standalone, dashboard-matched UI
+   ========================================== */
+
+:root {
+  --bg1: #020617;
+  --bg2: #0b1220;
+  --card: rgba(15, 23, 42, 0.75);
+  --border: rgba(255, 255, 255, 0.12);
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --primary: #6366f1;
+  --success: #22c55e;
+  --warning: #facc15;
+  --danger: #ef4444;
+}
+
+/* Page background */
+.um-page {
+  min-height: calc(100vh - 70px);
+  padding: 3rem 4rem;
+  background:
+    radial-gradient(600px at 20% 10%, rgba(99, 102, 241, 0.35), transparent 60%),
+    radial-gradient(600px at 80% 90%, rgba(59, 130, 246, 0.25), transparent 60%),
+    linear-gradient(180deg, var(--bg1), var(--bg2));
+  color: var(--text);
+  font-family: var(--admin-font-family);
+}
+
+/* Title */
+.um-title {
+  text-align: center;
+  font-size: var(--admin-text-3xl);
+  font-weight: var(--admin-font-bold);
+  line-height: var(--admin-leading-tight);
+  margin-bottom: 2.5rem;
+}
+
+/* Glass card */
+.um-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--admin-surface-card);
+  border: 1px solid var(--admin-border-subtle);
+  border-radius: var(--admin-radius-lg);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--admin-shadow-md);
+  padding: var(--admin-space-6);
+  line-height: var(--admin-leading-normal);
+}
+
+/* Grid-based table */
+.um-table {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Row */
+.um-row {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr 1fr 1fr 2.5fr;
+  align-items: center;
+  padding: var(--admin-space-3) var(--admin-space-4);
+  border-bottom: 1px solid var(--admin-border-subtle);
+  color: var(--admin-text-primary);
+  transition: background 0.15s ease;
+}
+
+.um-row:last-child {
+  border-bottom: none;
+}
+
+.um-row:not(.um-header):hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Header row */
+.um-header {
+  background: var(--admin-surface-card-alt);
+  font-size: var(--admin-text-xs);
+  font-weight: var(--admin-font-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--admin-text-secondary);
+  border-bottom: 1px solid var(--admin-border-default);
+}
+
+.um-header span:last-child {
+  text-align: right;
+}
+
+/* Cell text */
+.um-row span {
+  font-size: var(--admin-text-sm);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* Status pill */
+.um-status {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--admin-space-1) var(--admin-space-3);
+  border-radius: var(--admin-radius-pill);
+  font-size: var(--admin-text-xs);
+  font-weight: var(--admin-font-semibold);
+}
+
+.um-status.active {
+  background: rgba(34, 197, 94, 0.18);
+  color: var(--success);
+}
+
+.um-status.pending {
+  background: rgba(250, 204, 21, 0.18);
+  color: var(--warning);
+}
+
+.um-status.rejected {
+  background: rgba(239, 68, 68, 0.18);
+  color: var(--danger);
+}
+
+/* Actions */
+.um-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+/* Buttons */
+.um-btn {
+  padding: var(--admin-space-2) var(--admin-space-5);
+  border-radius: var(--admin-radius-sm);
+  border: none;
+  font-size: var(--admin-text-sm);
+  font-weight: var(--admin-font-semibold);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text);
+}
+
+.um-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+.um-btn.approve {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #ffffff;
+}
+
+.um-btn.reject {
+  background: linear-gradient(135deg, #facc15, #eab308);
+  color: #1f2937;
+}
+
+.um-btn.danger {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  color: #ffffff;
+}
+
+/* Empty / loading */
+.um-empty-state {
+  text-align: center;
+  padding: 2rem;
+  font-size: var(--admin-text-sm);
+  color: var(--admin-text-secondary);
+  font-style: italic;
+  display: block;
+}
+
+.um-empty-row {
+  justify-content: center;
+  padding: 2rem;
+  font-size: var(--admin-text-sm);
+  color: var(--admin-text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .um-page {
+    padding: 2rem 1.25rem;
+  }
+
+  .um-header {
+    display: none;
+  }
+
+  .um-row {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    border-radius: 14px;
+    background: rgba(15, 23, 42, 0.85);
+    margin-bottom: 1rem;
+  }
+
+  .um-row span {
+    white-space: normal;
+  }
+}

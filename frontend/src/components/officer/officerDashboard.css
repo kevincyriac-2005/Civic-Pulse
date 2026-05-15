@@ -1,0 +1,564 @@
+/* ==========================================
+   OFFICER DASHBOARD - Dark Glassmorphism Theme
+   (Mirrors AdminDashboard.css)
+   ========================================== */
+
+:root {
+    --sidebar-width: 260px;
+    --header-height: 70px;
+    --primary-color: #2563eb;
+    --primary-dark: #1e40af;
+    --primary-light: #60a5fa;
+    --secondary-color: var(--officer-text-dim);
+    --dark-color: #0f172a;
+    --darker-color: #020617;
+    --light-color: #f8fafc;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --transition: all 0.3s ease;
+}
+
+.officer-page {
+    font-family: 'Manrope', 'Inter', sans-serif;
+    background-color: var(--darker-color);
+    color: var(--officer-text-light);
+    min-height: 100vh;
+    display: flex;
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+.officer-sidebar {
+    width: var(--sidebar-width);
+    background: var(--officer-bg-overlay);
+    border-right: 1px solid var(--glass-border);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.officer-logo {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    border-bottom: 1px solid var(--glass-border);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--officer-text-light);
+}
+
+.officer-logo i {
+    color: var(--primary-light);
+    margin-right: 0.75rem;
+}
+
+.officer-sidebar nav {
+    padding: 1.5rem 1rem;
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-color) transparent;
+}
+
+.officer-sidebar nav::-webkit-scrollbar {
+    width: 6px;
+}
+
+.officer-sidebar nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.officer-sidebar nav::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+.officer-nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.85rem 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: var(--transition);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.officer-nav-item-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.officer-nav-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.officer-nav-chevron {
+    font-size: 0.8em;
+}
+
+.officer-submenu {
+    padding-left: 20px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.officer-submenu-icon {
+    font-size: 0.8em;
+}
+
+.officer-nav-item-logout {
+    margin-top: auto;
+    color: var(--officer-accent-red);
+}
+
+.officer-nav-item:hover,
+.officer-nav-item.active {
+    background: rgba(37, 99, 235, 0.15);
+    color: white;
+}
+
+.officer-nav-item i {
+    width: 24px;
+    margin-right: 0.75rem;
+    text-align: center;
+}
+
+/* Main Content */
+.officer-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    display: flex;
+    flex-direction: column;
+}
+
+.officer-header {
+    height: var(--header-height);
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+}
+
+.officer-header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 700;
+    color: var(--officer-text-light);
+}
+
+.officer-header p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+/* Grid Layout */
+.officer-grid-container {
+    padding: 2rem;
+}
+
+.officer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.grid-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Cards (Glassmorphism) */
+.officer-card {
+    background: var(--officer-bg-card-dark);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    margin-bottom: 1.5rem;
+}
+
+.officer-card h2 {
+    font-size: 1.25rem;
+    color: var(--officer-text-light);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.officer-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--officer-text-light);
+    transition: var(--transition);
+}
+
+.officer-input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary-light);
+}
+
+.officer-input option {
+    background: var(--dark-color);
+    color: var(--officer-text-light);
+}
+
+textarea.officer-input {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* File Upload */
+.file-upload-box {
+    border: 2px dashed var(--glass-border);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.02);
+    transition: var(--transition);
+}
+
+.file-upload-box:hover {
+    border-color: var(--primary-light);
+    background-color: rgba(37, 99, 235, 0.1);
+}
+
+/* Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-submit:hover {
+    background: var(--primary-dark);
+}
+
+/* Complaints List */
+.complaint-item {
+    display: flex;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding: 1.5rem 0;
+}
+
+.complaint-item:last-child {
+    border-bottom: none;
+}
+
+.complaint-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.complaint-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--officer-text-light);
+}
+
+.complaint-info p {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status-badge.pending {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--warning-color);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.status-badge.resolved {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--success-color);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-badge.processing {
+    background: rgba(37, 99, 235, 0.15);
+    color: var(--primary-light);
+    border: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .officer-sidebar {
+        width: 80px;
+    }
+
+    .officer-logo,
+    .officer-nav-item span {
+        display: none;
+    }
+
+    .officer-logo {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .officer-logo i {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .officer-content {
+        margin-left: 80px;
+    }
+
+    .officer-nav-item i {
+        margin: 0;
+    }
+
+    .officer-nav-item {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .officer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tabs */
+.officer-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 0.5rem;
+}
+
+.officer-tab {
+    background: transparent;
+    border: none;
+    color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 8px;
+    position: relative;
+}
+
+.officer-tab:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.officer-tab.active {
+    color: var(--primary-light);
+    background: rgba(37, 99, 235, 0.15);
+}
+
+.officer-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    /* Align with border-bottom of container */
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--primary-light);
+    border-radius: 2px 2px 0 0;
+}
+
+.tab-badge {
+    display: inline-block;
+    background: var(--danger-color);
+    color: var(--officer-text-light);
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 12px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+/* Animations */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* unused candidate: .animate-scale */
+.animate-scale {
+    animation: scaleIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Buttons */
+.btn-secondary {
+    background: rgba(37, 99, 235, 0.15);
+    color: var(--primary-light);
+    border: 1px solid rgba(37, 99, 235, 0.35);
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-secondary:hover {
+    background: rgba(37, 99, 235, 0.3);
+    border-color: var(--primary-light);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.btn-submit {
+    background: var(--primary-color);
+    color: #fff;
+    border: 1px solid var(--primary-dark);
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn-submit:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.btn-submit:disabled,
+.btn-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+    border: 1px solid var(--primary-dark);
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.officer-dashboard {
+    width: 100%;
+}
+
+.fade-in {
+    animation: fadeIn 0.25s ease-out;
+}
+
+.animate-fade-up {
+    animation: fadeUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

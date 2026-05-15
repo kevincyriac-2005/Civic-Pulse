@@ -1,0 +1,249 @@
+/* Custom CSS Charts for Admin Analytics */
+
+/* Reuse .dashboard-container, .dashboard-panel, .panel-padding, .panel-title from DashboardOverview.css */
+
+/* Chart Container */
+.chart-container {
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    padding-top: 20px;
+    margin-top: 10px;
+    position: relative;
+    border: 1px solid var(--admin-border-subtle);
+    border-radius: var(--admin-radius-lg);
+}
+
+/* Y-Axis Guidelines container (optional visual flair) */
+.chart-grid-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.grid-line {
+    width: 100%;
+    border-top: 1px dashed rgba(255, 255, 255, 0.05);
+}
+
+.chart-bar-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    z-index: 1;
+}
+
+.chart-bar-fill {
+    width: 60%;
+    background: linear-gradient(180deg, var(--admin-chart-blue) 0%, var(--admin-chart-purple) 100%);
+    border-radius: 4px 4px 0 0;
+    transition: all 0.2s ease, height 0.8s ease-out;
+    min-height: 4px;
+    position: relative;
+}
+
+.chart-bar-fill:hover {
+    background: linear-gradient(180deg, var(--admin-chart-cyan) 0%, var(--admin-chart-blue) 100%);
+    opacity: 0.85;
+}
+
+.chart-bar-fill.success {
+    background: linear-gradient(180deg, var(--admin-chart-green) 0%, var(--admin-chart-cyan) 100%);
+}
+
+.chart-bar-fill.success:hover {
+    background: linear-gradient(180deg, var(--admin-chart-cyan) 0%, var(--admin-chart-green) 100%);
+    opacity: 0.85;
+}
+
+.chart-bar-fill.warning {
+    background: linear-gradient(180deg, var(--admin-chart-amber) 0%, var(--admin-chart-red) 100%);
+}
+
+.chart-bar-fill.warning:hover {
+    background: linear-gradient(180deg, var(--admin-chart-red) 0%, var(--admin-chart-amber) 100%);
+    opacity: 0.85;
+}
+
+/* Tooltip on hover */
+.chart-tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(15, 23, 42, 0.9);
+    color: #f8fafc;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: var(--admin-text-xs);
+    font-weight: var(--admin-font-semibold);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chart-bar-fill:hover .chart-tooltip {
+    opacity: 1;
+}
+
+.chart-label {
+    margin-top: 12px;
+    font-size: var(--admin-text-xs);
+    color: var(--admin-text-muted);
+    text-align: center;
+    font-weight: var(--admin-font-medium);
+}
+
+/* Horizontal variation (for categories) */
+.h-chart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 10px;
+    border: 1px solid var(--admin-border-subtle);
+    border-radius: var(--admin-radius-lg);
+}
+
+.h-chart-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.h-chart-label {
+    width: 100px;
+    font-size: var(--admin-text-xs);
+    color: var(--admin-text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.h-chart-track {
+    flex: 1;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.h-chart-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--admin-chart-purple) 0%, var(--admin-chart-blue) 100%);
+    border-radius: 6px;
+    transition: all 0.2s ease, width 0.8s ease-out;
+}
+
+.h-chart-fill:hover {
+    opacity: 0.85;
+}
+
+.h-chart-value {
+    width: 40px;
+    text-align: right;
+    font-size: var(--admin-text-xs);
+    font-weight: var(--admin-font-semibold);
+    color: var(--admin-text-muted);
+}
+
+/* Time range selector */
+.time-selector {
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.time-btn {
+    padding: var(--admin-space-2) var(--admin-space-5);
+    border-radius: var(--admin-radius-sm);
+    border: none;
+    background: transparent;
+    color: var(--admin-text-muted);
+    font-size: var(--admin-text-sm);
+    font-weight: var(--admin-font-semibold);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.time-btn:hover {
+    color: var(--light-color, #f8fafc);
+}
+
+.time-btn.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--light-color, #f8fafc);
+    font-weight: var(--admin-font-semibold);
+}
+
+/* Analytics time selector alignment */
+.analytics-time-selector {
+    align-self: center;
+}
+
+.summary-card .card-text p {
+    font-size: var(--admin-text-xs);
+    font-weight: var(--admin-font-medium);
+}
+
+.summary-card .card-text h3 {
+    font-size: var(--admin-text-3xl);
+    font-weight: var(--admin-font-bold);
+}
+
+.panel-title {
+    font-size: var(--admin-text-xl);
+    font-weight: var(--admin-font-semibold);
+}
+
+.admin-analytics-loading {
+    text-align: center;
+    padding: var(--admin-space-8);
+    font-size: var(--admin-text-base);
+    color: var(--admin-text-secondary);
+}
+
+.admin-analytics-error {
+    text-align: center;
+    padding: var(--admin-space-8);
+    font-size: var(--admin-text-base);
+    color: var(--admin-error);
+}
+
+.analytics-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--admin-space-10);
+    color: var(--admin-text-muted);
+    font-size: var(--admin-text-sm);
+    text-align: center;
+    gap: var(--admin-space-2);
+    min-height: 120px;
+}
+
+.analytics-empty-state-icon {
+    font-size: var(--admin-text-3xl);
+    opacity: 0.4;
+}
+
+.analytics-empty-state-text {
+    font-size: var(--admin-text-sm);
+    color: var(--admin-text-muted);
+    font-weight: var(--admin-font-medium);
+}

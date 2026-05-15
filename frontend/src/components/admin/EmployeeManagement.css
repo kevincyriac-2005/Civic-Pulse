@@ -1,0 +1,281 @@
+/* ==========================================
+   CIVIC-PULSE — Employee Management
+   Standalone, dashboard-matched UI
+   ========================================== */
+
+:root {
+    --bg1: #020617;
+    --bg2: #0b1220;
+    --card: rgba(15, 23, 42, 0.75);
+    --border: rgba(255, 255, 255, 0.12);
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --primary: #6366f1;
+    --success: #22c55e;
+    --warning: #facc15;
+    --danger: #ef4444;
+}
+
+/* Page background */
+.em-page {
+    min-height: calc(100vh - 70px);
+    padding: 3rem 4rem;
+    background:
+        radial-gradient(600px at 20% 10%, rgba(99, 102, 241, 0.35), transparent 60%),
+        radial-gradient(600px at 80% 90%, rgba(59, 130, 246, 0.25), transparent 60%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+    color: var(--text);
+    font-family: var(--admin-font-family);
+}
+
+/* Title */
+.em-title {
+    text-align: center;
+    font-size: var(--admin-text-3xl);
+    font-weight: var(--admin-font-bold);
+    line-height: var(--admin-leading-tight);
+    margin-bottom: 2.5rem;
+}
+
+/* Glass card */
+.em-card {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--admin-surface-card);
+    border: 1px solid var(--admin-border-subtle);
+    border-radius: var(--admin-radius-lg);
+    backdrop-filter: blur(18px);
+    box-shadow: var(--admin-shadow-md);
+    padding: var(--admin-space-6);
+    line-height: var(--admin-leading-normal);
+}
+
+/* Grid-based table */
+.em-table {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Row */
+.em-row {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr 1.5fr 3fr;
+    /* Adjusted for better spacing */
+    align-items: center;
+    padding: var(--admin-space-3) var(--admin-space-4);
+    border-bottom: 1px solid var(--admin-border-subtle);
+    color: var(--admin-text-primary);
+    transition: background 0.15s ease;
+}
+
+.em-row:last-child {
+    border-bottom: none;
+}
+
+.em-row:not(.em-header):hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* Header row */
+.em-header {
+    background: var(--admin-surface-card-alt);
+    font-size: var(--admin-text-xs);
+    font-weight: var(--admin-font-semibold);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--admin-text-secondary);
+    border-bottom: 1px solid var(--admin-border-default);
+}
+
+.em-header span:last-child {
+    text-align: right;
+}
+
+/* Cell text */
+.em-row span {
+    font-size: var(--admin-text-sm);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+/* Status pill */
+.em-status {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--admin-space-1) var(--admin-space-3);
+    border-radius: var(--admin-radius-pill);
+    font-size: var(--admin-text-xs);
+    font-weight: var(--admin-font-semibold);
+}
+
+.em-status.active {
+    background: rgba(34, 197, 94, 0.18);
+    color: var(--success);
+}
+
+.em-status.pending {
+    background: rgba(250, 204, 21, 0.18);
+    color: var(--warning);
+}
+
+.em-status.rejected {
+    background: rgba(239, 68, 68, 0.18);
+    color: var(--danger);
+}
+
+/* Actions */
+.em-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+/* Buttons */
+.em-btn {
+    padding: var(--admin-space-2) var(--admin-space-5);
+    border-radius: var(--admin-radius-sm);
+    border: none;
+    font-size: var(--admin-text-sm);
+    font-weight: var(--admin-font-semibold);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--muted);
+    /* Default text color for inactive tabs */
+    background: rgba(255, 255, 255, 0.05);
+    /* Slight background for visibility */
+    border: 1px solid transparent;
+}
+
+.em-btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.92;
+}
+
+.em-btn.primary {
+    background: var(--primary);
+    color: white;
+    border: 1px solid var(--border);
+}
+
+.em-btn.approve {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: #ffffff;
+}
+
+.em-btn.reject {
+    background: linear-gradient(135deg, #facc15, #eab308);
+    color: #1f2937;
+}
+
+.em-btn.danger {
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+    color: #ffffff;
+}
+
+/* Empty / loading */
+.em-empty-state {
+    text-align: center;
+    padding: 2rem;
+    font-size: var(--admin-text-sm);
+    color: var(--admin-text-secondary);
+    font-style: italic;
+    display: block;
+}
+
+/* =====================
+   EMPLOYEE SPECIFIC STYLES
+   ===================== */
+.em-tabs {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.em-add-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--admin-surface-modal);
+    padding: var(--admin-space-8);
+    border-radius: var(--admin-radius-xl);
+    width: 400px;
+    max-width: 90%;
+    box-shadow: var(--admin-shadow-xl);
+    border: 1px solid var(--admin-border-default);
+    color: var(--text);
+}
+
+.modal-content h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--primary);
+    font-size: var(--admin-text-2xl);
+    font-weight: var(--admin-font-bold);
+    line-height: var(--admin-leading-tight);
+}
+
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: var(--admin-font-medium);
+    font-size: var(--admin-text-sm);
+    color: var(--admin-text-secondary);
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: var(--admin-space-2) var(--admin-space-4);
+    border-radius: var(--admin-radius-sm);
+    border: 1px solid var(--admin-border-default);
+    background: var(--admin-surface-card-alt);
+    color: var(--admin-text-primary);
+    font-size: var(--admin-text-sm);
+    font-family: var(--admin-font-family);
+    box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--admin-accent, var(--admin-accent-blue));
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 2rem;
+    justify-content: flex-end;
+}
+
+.input-group select.em-dept-select {
+    margin-top: 5px;
+    padding: var(--admin-space-2) var(--admin-space-4);
+    border: 1px solid var(--admin-border-default);
+    border-radius: var(--admin-radius-sm);
+}

@@ -1,0 +1,49 @@
+.ct-flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ct-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.ct-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.ct-card {
+    background: var(--ct-bg-card-dark);
+    border: 1px solid var(--ct-border-medium);
+    border-radius: var(--ct-radius-card);
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.ct-modal-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    padding: 20px;
+}
+
+.ct-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.85rem;
+    border-radius: var(--ct-radius-pill);
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+}

@@ -1,0 +1,173 @@
+/* Component-local extension file for CitizenDashboardPage */
+
+.cd-upload-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cd-mode-badge {
+    margin-left: 10px;
+}
+
+.cd-mode-badge-gallery {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.cd-webcam-wrap {
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.cd-webcam-title {
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.cd-camera-error {
+    color: red;
+    padding: 10px;
+    background: #fee2e2;
+    border-radius: 8px;
+}
+
+.cd-camera-error-list {
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.cd-camera-action-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.cd-camera-action-btn-secondary {
+    background: #e2e8f0;
+    border: 1px solid #cbd5e1;
+}
+
+.cd-webcam-feed {
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: block;
+    background-color: #000;
+    min-height: 200px;
+}
+
+.cd-capture-btn {
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.cd-warning-note {
+    color: orange;
+    display: block;
+    margin-top: 5px;
+}
+
+.cd-gallery-note {
+    color: var(--ct-text-dim);
+    display: block;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.cd-preview-wrap {
+    position: relative;
+}
+
+.cd-preview-image {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.cd-retake-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cd-location-status {
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.cd-location-warning {
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.cd-approx-wrap {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cd-approx-label {
+    font-size: 0.95rem;
+}
+
+.cd-location-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.cd-gps-error {
+    color: red;
+    font-size: 0.9rem;
+}
+
+.cd-map-wrap {
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+}
+
+.cd-map-pin-hint {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    pointer-events: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    color: #333;
+}
+
+.cd-map-canvas {
+    height: 100%;
+    width: 100%;
+}
+
+.cd-map-note {
+    display: block;
+    margin-top: 5px;
+    color: var(--ct-text-dim);
+    font-style: italic;
+}

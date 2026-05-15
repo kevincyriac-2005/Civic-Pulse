@@ -1,0 +1,347 @@
+/* ==========================================
+   FIELDWORKER DASHBOARD - Dark Glassmorphism Theme
+   (Mirrors AdminDashboard.css)
+   ========================================== */
+
+:root {
+    --sidebar-width: 260px;
+    --header-height: 70px;
+    --primary-color: #2563eb;
+    --primary-dark: #1e40af;
+    --primary-light: #60a5fa;
+    --secondary-color: var(--fw-text-dim);
+    --dark-color: #0f172a;
+    --darker-color: #020617;
+    --light-color: #f8fafc;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --transition: all 0.3s ease;
+}
+
+.fieldworker-page {
+    font-family: 'Manrope', 'Inter', sans-serif;
+    background-color: var(--darker-color);
+    color: var(--fw-text-light);
+    min-height: 100vh;
+    display: flex;
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+.fieldworker-sidebar {
+    width: var(--sidebar-width);
+    background: var(--fw-bg-overlay);
+    border-right: 1px solid var(--glass-border);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.fieldworker-logo {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    border-bottom: 1px solid var(--glass-border);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--fw-text-light);
+}
+
+.fieldworker-logo i {
+    color: var(--primary-light);
+    margin-right: 0.75rem;
+}
+
+.fieldworker-sidebar nav {
+    padding: 1.5rem 1rem;
+    flex: 1;
+}
+
+.fieldworker-nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.85rem 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: var(--transition);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.fieldworker-nav-item:hover,
+.fieldworker-nav-item.active {
+    background: rgba(37, 99, 235, 0.15);
+    color: white;
+}
+
+.fieldworker-nav-item i {
+    width: 24px;
+    margin-right: 0.75rem;
+    text-align: center;
+}
+
+/* Main Content */
+.fieldworker-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    display: flex;
+    flex-direction: column;
+}
+
+.fieldworker-header {
+    height: var(--header-height);
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.fieldworker-header h1 {
+    font-size: 1.5rem;
+    margin: 0 0 4px 0;
+    font-weight: 800;
+    background: linear-gradient(to right, #ffffff, #93c5fd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.fieldworker-header p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--fw-text-muted);
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+/* Grid Layout */
+.fieldworker-grid-container {
+    padding: 2rem;
+}
+
+.fieldworker-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.grid-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Cards (Glassmorphism) */
+.fieldworker-card {
+    background: var(--fw-bg-card-dark);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    margin-bottom: 1.5rem;
+}
+
+.fieldworker-card h2 {
+    font-size: 1.25rem;
+    color: var(--fw-text-light);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.fieldworker-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--fw-text-light);
+    transition: var(--transition);
+}
+
+.fieldworker-input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary-light);
+}
+
+.fieldworker-input option {
+    background: var(--dark-color);
+    color: var(--fw-text-light);
+}
+
+textarea.fieldworker-input {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* File Upload */
+.file-upload-box {
+    border: 2px dashed var(--glass-border);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.02);
+    transition: var(--transition);
+}
+
+.file-upload-box:hover {
+    border-color: var(--primary-light);
+    background-color: rgba(37, 99, 235, 0.1);
+}
+
+/* Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-submit:hover {
+    background: var(--primary-dark);
+}
+
+/* Complaints List */
+.complaint-item {
+    display: flex;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--glass-border);
+    padding: 1.5rem 0;
+}
+
+.complaint-item:last-child {
+    border-bottom: none;
+}
+
+.complaint-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.complaint-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--fw-text-light);
+}
+
+.complaint-info p {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status-badge.pending {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--warning-color);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.status-badge.resolved {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--success-color);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-badge.processing {
+    background: rgba(37, 99, 235, 0.15);
+    color: var(--primary-light);
+    border: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .fieldworker-sidebar {
+        width: 80px;
+    }
+
+    .fieldworker-logo,
+    .fieldworker-nav-item span {
+        display: none;
+    }
+
+    .fieldworker-logo {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .fieldworker-logo i {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .fieldworker-content {
+        margin-left: 80px;
+    }
+
+    .fieldworker-nav-item i {
+        margin: 0;
+    }
+
+    .fieldworker-nav-item {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .fieldworker-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.fieldworker-nav-item-logout {
+    margin-top: auto;
+    color: var(--fw-accent-red);
+}
+

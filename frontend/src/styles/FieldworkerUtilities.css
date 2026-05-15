@@ -1,0 +1,49 @@
+.fw-flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fw-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.fw-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.fw-card {
+    background: var(--fw-bg-card-dark);
+    border: 1px solid var(--fw-border-medium);
+    border-radius: var(--fw-radius-card);
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.fw-modal-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    padding: 20px;
+}
+
+.fw-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.85rem;
+    border-radius: var(--fw-radius-pill);
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+}

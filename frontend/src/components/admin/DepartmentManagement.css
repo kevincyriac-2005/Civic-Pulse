@@ -1,0 +1,220 @@
+/* ==========================================
+   DEPARTMENT MANAGEMENT - Dark Glassmorphism Theme
+   (Embedded Admin Styles for Modularity)
+   ========================================== */
+
+:root {
+    --dm-primary: #2563eb;
+    --dm-primary-dark: #1e40af;
+    --dm-primary-light: #60a5fa;
+    --dm-secondary: var(--admin-text-dim);
+    --dm-dark: #0f172a;
+    --dm-darker: #020617;
+    --dm-light: #f8fafc;
+    --dm-success: #10b981;
+    --dm-danger: #ef4444;
+    --dm-glass-bg: rgba(255, 255, 255, 0.05);
+    --dm-glass-border: rgba(255, 255, 255, 0.1);
+    --dm-transition: all 0.3s ease;
+}
+
+.dm-page {
+    padding: 2rem;
+    background-color: var(--dm-darker);
+    /* Dark Background */
+    min-height: calc(100vh - 70px);
+    color: var(--dm-light);
+    font-family: var(--admin-font-family);
+}
+
+.dm-title {
+    font-size: var(--admin-text-3xl);
+    color: white;
+    margin-bottom: 2rem;
+    font-weight: var(--admin-font-bold);
+    line-height: var(--admin-leading-tight);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dm-add-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+/* Glass Card */
+.dm-card {
+    background: var(--admin-surface-card);
+    border: 1px solid var(--admin-border-subtle);
+    border-radius: var(--admin-radius-lg);
+    box-shadow: var(--admin-shadow-md);
+    padding: var(--admin-space-6);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    line-height: var(--admin-leading-normal);
+}
+
+/* Table Styles */
+.dm-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dm-row {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1.5fr;
+    padding: var(--admin-space-3) var(--admin-space-4);
+    align-items: center;
+    font-size: var(--admin-text-sm);
+    color: var(--admin-text-primary);
+    border-bottom: 1px solid var(--admin-border-subtle);
+    transition: background 0.15s ease;
+}
+
+.dm-row:not(.dm-header):hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.dm-row:last-child {
+    border-bottom: none;
+}
+
+.dm-header {
+    background: var(--admin-surface-card-alt);
+    font-weight: var(--admin-font-semibold);
+    color: var(--admin-text-secondary);
+    text-transform: uppercase;
+    font-size: var(--admin-text-xs);
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--admin-border-default);
+}
+
+.dm-empty-state {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    font-size: var(--admin-text-sm);
+    color: var(--admin-text-secondary);
+    font-style: italic;
+    /* Reset grid template for single message */
+    display: flex;
+    width: 100%;
+}
+
+.dm-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Buttons */
+.dm-btn {
+    padding: var(--admin-space-2) var(--admin-space-5);
+    border: none;
+    border-radius: var(--admin-radius-sm);
+    font-size: var(--admin-text-sm);
+    font-weight: var(--admin-font-semibold);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: white;
+}
+
+.dm-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dm-btn.approve {
+    background: linear-gradient(135deg, var(--dm-success), #059669);
+}
+
+.dm-btn.danger {
+    background: linear-gradient(135deg, var(--dm-danger), #b91c1c);
+}
+
+.dm-btn.reject {
+    background: var(--dm-secondary);
+}
+
+.dm-btn:not(.approve):not(.danger):not(.reject) {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--dm-glass-border);
+}
+
+.dm-btn:not(.approve):not(.danger):not(.reject):hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Modal Styles (Dark Glass) */
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--admin-surface-modal);
+    padding: var(--admin-space-8);
+    border-radius: var(--admin-radius-xl);
+    width: 500px;
+    max-width: 90%;
+    box-shadow: var(--admin-shadow-xl);
+    border: 1px solid var(--admin-border-default);
+    color: var(--admin-text-light);
+}
+
+.modal-content h2 {
+    margin-bottom: 2rem;
+    color: white;
+    font-size: var(--admin-text-2xl);
+    font-weight: var(--admin-font-bold);
+    line-height: var(--admin-leading-tight);
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--admin-text-secondary);
+    font-weight: var(--admin-font-medium);
+    font-size: var(--admin-text-sm);
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    padding: var(--admin-space-2) var(--admin-space-4);
+    background: var(--admin-surface-card-alt);
+    border: 1px solid var(--admin-border-default);
+    border-radius: var(--admin-radius-sm);
+    font-size: var(--admin-text-sm);
+    color: var(--admin-text-primary);
+    font-family: var(--admin-font-family);
+    transition: var(--dm-transition);
+}
+
+.input-group textarea.dm-textarea-static {
+    width: 100%;
+    padding: var(--admin-space-2) var(--admin-space-4);
+    border: 1px solid var(--admin-border-default);
+    border-radius: var(--admin-radius-sm);
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: var(--admin-accent, var(--admin-accent-blue));
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}

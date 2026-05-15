@@ -1,0 +1,29 @@
+.fwo-progress-text {
+    text-align: right;
+}
+
+.fwo-progress-ring-wrap {
+    position: relative;
+    width: 56px;
+    height: 56px;
+}
+
+.fwo-kpi-clickable {
+    cursor: pointer;
+}
+
+.fwo-kpi-primary-body {
+    margin-top: 32px;
+    margin-bottom: 8px;
+    z-index: 10;
+    position: relative;
+}
+
+.fwo-urgent-label {
+    color: #dc2626;
+}
+
+.fwo-kpi-icon-urgent {
+    background-color: #fef2f2;
+    color: #dc2626;
+}
