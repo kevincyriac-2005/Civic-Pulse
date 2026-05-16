@@ -20,12 +20,17 @@ Centralizes civic issue reporting, intelligent AI-based image triage, geospatial
 ![Citizen Map View](assets/citizen_map.png)
 *Interactive map with status-coded complaint pins allowing citizens to track neighborhood issues.*
 
-### Officer Performance Analytics
+### Officer Performance
 ![Officer Analytics Page](assets/officer_analytics.png)
 *Departmental efficiency metrics showing resolution rates, SLA tracking, and timeline statistics.*
 
-- **Field Worker Interface** – Task queues, priority flags, and status updates
-- **Admin Heatmaps** – City-wide visualization of high-frequency complaint zones
+### Field Worker Interface
+![Field Worker Interface](assets/field_operations.png)
+*Task queues, priority flags, and status updates.*
+
+### Admin Heatmaps
+![Admin Heatmaps](assets/admin_heatmap.png)
+*City-wide visualization of high-frequency complaint zones*
 
 ---
 
